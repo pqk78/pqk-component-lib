@@ -1,0 +1,22 @@
+{
+  "name": "pqk-component-library",
+  "version": "1.0.0",
+  "description": "",
+  "license": "GPL-3.0-only",
+  "author": "Maz Planchak",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^9.0.16",
+    "@storybook/addon-docs": "^9.0.16",
+    "@storybook/html-vite": "^9.0.16",
+    "liquidjs": "^10.21.1",
+    "nunjucks": "^3.2.4",
+    "storybook": "^9.0.16"
+  }
+}
