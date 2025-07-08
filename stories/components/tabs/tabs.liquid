@@ -1,0 +1,11 @@
+<tabbed-content>
+  {%- for index in (1..items) -%}
+    {%- assign content = lorem[index - 1] -%}
+    {% capture body -%}
+      {%- for paragraph in content.paragraphs -%}
+        <p>{{ paragraph }}</p>
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- render 'components/accordion/accordion' size: compact, label: content.label, content: body -%}
+  {% endfor %}
+</tabbed-content>

@@ -1,0 +1,43 @@
+.tabs {
+  border: 1px solid var(--accent-primary);
+
+  .tab-list {
+    border-block-end: 1px solid var(--accent-primary);
+    display: flex;
+    padding-inline: 1rem;
+  }
+
+  .tab {
+    background-color: transparent;
+    border: none;
+    font-size: 1.125rem;
+    font-variant: small-caps;
+    padding-block: 1rem;
+
+    &.selected {
+      border-block-end: 2px solid var(--accent-primary);
+    }
+  }
+
+  .tab-panel {
+    &:not(.current) {
+      display: none;
+    }
+
+    padding: 2rem 1rem;
+  }
+
+  @container (width < 45rem) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.tab-accordion {
+  @container (width >= 45rem) {
+    & {
+      display: none;
+    }
+  }
+}
