@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@100..900&family=Hepta+Slab:wght@1..900&display=swap');
+
+:root {
+  --accent-primary: #2f3cbe;
+  --accent-secondary: #c011d7;
+  --background-color: #fefafc;
+  --color: #160413;
+
+  --font-sans: 'Comme', sans-serif;
+  --font-serif: 'Hepta Slab', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: var(--font-sans);
+}

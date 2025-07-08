@@ -1,0 +1,19 @@
+html:has(#storybook-root:not([hidden])) {
+  min-height: 100%;
+}
+
+#storybook-root,
+.docs-story {
+  container-type: inline-size;
+  margin-inline: auto;
+  max-width: 62.5rem;
+}
+
+#storybook-root {
+  margin-block: 8rem;
+  text-align: center;
+
+  * {
+    text-align: start;
+  }
+}
