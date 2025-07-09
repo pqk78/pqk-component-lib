@@ -12,7 +12,6 @@ export default {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'reverse'],
     },
-    onClick: { action: 'onClick' },
     size: {
       control: { type: 'select' },
       options: ['default', 'compact'],
