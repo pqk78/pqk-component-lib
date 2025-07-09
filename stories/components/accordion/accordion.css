@@ -1,4 +1,5 @@
 .accordion {
+  --accent-accordion: var(--accent-primary);
   width: min(100%, 80ch + 4rem);
 
   &::details-content {
@@ -37,29 +38,31 @@
   }
 
   &.compact {
-    border-top: 1px solid var(--accent-primary);
-    padding: .5rem;
+    border-top: 1px solid var(--accent-accordion);
 
     &:not(:has(+ .accordion)) {
-      border-block-end: 1px solid var(--accent-primary);
+      border-block-end: 1px solid var(--accent-accordion);
     }
 
     .accordion-label {
       font-size: 1.125rem;
       font-weight: 550;
+      padding: .5rem
     }
 
     .accordion-body {
-      padding: 1rem 0;
+      background-color: color-mix(in srgb, var(--background-color) 97.5%, var(--color) 2.5%);
+      border-block-start: 1px solid color-mix(in srgb, var(--background-color) 60%, var(--accent-accordion) 40%);
+      padding: 1rem .5rem;
     }
   }
 
   &.large {
-    border: 2px solid var(--accent-secondary);
+    border: 2px solid var(--accent-accordion);
     border-radius: .5rem;
 
     .accordion-label {
-      background-color: var(--accent-secondary);
+      background-color: var(--accent-accordion);
       color: var(--background-color);
       font-size: 1.25rem;
       font-weight: 625;
@@ -67,11 +70,15 @@
     }
 
     .accordion-body {
-      padding: 1rem 1.5rem;
+      padding: 2rem 1.5rem;
     }
 
     &:has(+ .accordion) {
       margin-block-end: 1.5rem;
     }
+  }
+
+  &.secondary {
+    --accent-accordion: var(--accent-secondary);
   }
 }
