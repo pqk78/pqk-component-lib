@@ -1,0 +1,69 @@
+.router {
+  &.list {
+    .router-container {
+      max-width: 50rem;
+    }
+
+    .router-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .router-item {
+      border-block-end: 1px dotted var(--accent-primary);
+      border-block-start: 1px dotted var(--accent-primary);
+      margin: 0 0 -1px;
+      padding: 0;
+
+      @container(width >= 57.5rem) {
+        column-gap: 1.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 2rem 0;
+      }
+
+      &::marker {
+        font-size: 0;
+      }
+
+      .router-image-container {
+        overflow: hidden;
+
+        @container(width >= 57.5rem) {
+          flex-shrink: 0;
+          width: min(40%, 16rem);
+        }
+      }
+
+      .router-image {
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .router-link {
+        color: var(--primary-color);
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 1em;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: var(--accent-color);
+        }
+      }
+
+      .router-description {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        padding: 2rem 0;
+
+        @container(width >= 57.5rem) {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

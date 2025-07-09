@@ -1,0 +1,22 @@
+<div class="router {{ theme }}">
+  <ul class="router-list">
+  {%- for index in (1..items) -%}
+    {%- assign content = lorem[index - 1] %}
+    <li class="router-item">
+      {%- if images %}
+      <div class="router-image-container">
+        <a href="#" class="router-image-link" aria-hidden="true" tabindex="-1">
+          <img src="https://placehold.co/600x400/333333/888888.jpg?text={{ content.label | replace: ' ', '+' }}&font=Open+Sans" alt="" class="router-image">
+        </a>
+      </div>
+      {%- endif %}
+      <div class="router-text">
+        <a href="#" class="router-link">{{ content.label }}</a>
+        {% if descriptions %}
+        <p>{{ content.description }}</p>
+        {% endif %}
+      </div>
+    </li>
+  {%- endfor %}
+  </ul>
+</div>

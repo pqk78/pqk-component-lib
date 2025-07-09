@@ -1,0 +1,76 @@
+.router {
+  &.grid {
+    .router-list {
+      --gap: 2.5rem;
+      --item-width: calc((100% - (var(--gap) * (var(--columns) - 1)))/var(--columns));
+      display: flex;
+      flex-flow: row wrap;
+      gap: 4rem 2.5rem;
+      justify-content: flex-start;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @container (width > 47.5rem) {
+        --columns: 2;
+      }
+
+      @container (width > 57.5rem) {
+        --columns: 3;
+      }
+
+      /* &:not(:has(img)) {
+        row-gap: unset;
+      } */
+    }
+
+    .router-item {
+      width: var(--item-width);
+
+      &:not(:has(img)) {
+        border-block-start: 1px solid var(--line);
+
+        .router-description {
+          padding: 2rem 0 1rem;
+        }
+      }
+
+      &:has(img) {
+        .router-text {
+          padding-block-start: 1rem;
+        }
+      }
+    }
+
+    .router-image-container {
+      overflow: hidden;
+    }
+
+    .router-image {
+      aspect-ratio: 16 / 9;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .router-link {
+      color: var(--primary-color);
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 1em;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--accent-color);
+      }
+    }
+
+    .router-description {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      padding: 2rem 0;
+    }
+  }
+}
