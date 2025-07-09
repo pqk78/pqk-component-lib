@@ -1,0 +1,12 @@
+<fieldset class="form-fieldset">
+  <legend class="form-legend">{{ label | default: 'Radio Button Group' }}</legend>
+  <div class="form-item">
+    {% for index in (1..items) %}
+      <label class="form-label" for="formid-r-{{ index }}">
+        <input class="form-radio" type="radio" id="formid-r-{{ index }}" name="r">
+        {{ lorem[index - 1].label }}
+      </label>
+    {% endfor %}
+    
+  </div>
+</fieldset>

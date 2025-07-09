@@ -1,0 +1,12 @@
+<fieldset class="form-fieldset">
+  <legend class="form-legend">{{ label | default: 'Checkbox Group' }}</legend>
+  <div class="form-item">
+    {% for index in (1..items) %}
+      <label class="form-label" for="formid-c-{{ index }}">
+        <input class="form-checkbox" type="checkbox" id="formid-c-{{ index }}" name="c">
+        {{ lorem[index - 1].label }}
+      </label>
+    {% endfor %}
+    
+  </div>
+</fieldset>

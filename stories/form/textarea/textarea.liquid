@@ -1,0 +1,8 @@
+<text-area>
+  <div class="form-item">
+    <label for="formid-ta" class="form-label{% if required %} required{% endif  %}">
+      <span class="form-label-inner">{{ label }}:</span>
+      <textarea class="form-textarea" id="formid-ta" name="ta" rows="4"{% if maxlength %}maxlength="{{ maxlength }}{% endif %}"{% if required %} required{% endif  %}></textarea>
+    </label>
+  </div>
+</text-area>
