@@ -4,7 +4,7 @@ import { liquid } from '../../shared/engine';
 import lorem from '../../shared/lorem';
 
 export default {
-  title: 'Components/Tabs',
+  title: 'UI Components/Tabs',
   tags: ['autodocs'],
   render: args => liquid('components/tabs/tabs', {...args, lorem}),
   argTypes: {

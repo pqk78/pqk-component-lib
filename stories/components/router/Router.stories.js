@@ -3,7 +3,7 @@ import { liquid } from "../../shared/engine"
 import lorem from "../../shared/lorem";
 
 export default {
-  title: 'Components/Router',
+  title: 'UI Components/Router',
   tags: ['autodocs'],
   render: args => liquid('components/router/router', {...args, lorem}),
   argTypes: {

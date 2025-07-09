@@ -2,7 +2,7 @@ import './accordion.css';
 import { liquid } from '../../shared/engine';
 
 export default {
-  title: 'Components/Accordion',
+  title: 'UI Components/Accordion',
   tags: ['autodocs'],
   render: args => liquid('components/accordion/accordion', { ...args }),
   argTypes: {
