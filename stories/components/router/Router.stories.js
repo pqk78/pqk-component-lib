@@ -1,11 +1,10 @@
 import './router.css';
 import { liquid } from "../../shared/engine"
-import lorem from "../../shared/lorem";
 
 export default {
   title: 'UI Components/Router',
   tags: ['autodocs'],
-  render: args => liquid('components/router/router', {...args, lorem}),
+  render: args => liquid('components/router/router', args),
   argTypes: {
     label: { control: 'text' },
     theme: {

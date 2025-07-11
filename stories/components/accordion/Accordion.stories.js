@@ -4,7 +4,7 @@ import { liquid } from '../../shared/engine';
 export default {
   title: 'UI Components/Accordion',
   tags: ['autodocs'],
-  render: args => liquid('components/accordion/accordion', { ...args }),
+  render: args => liquid('components/accordion/accordion', args),
   argTypes: {
     label: { control: 'text' },
     size: {

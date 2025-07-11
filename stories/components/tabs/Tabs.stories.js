@@ -1,12 +1,11 @@
 import './tabs.css';
 import './tabbed-content.webc';
 import { liquid } from '../../shared/engine';
-import lorem from '../../shared/lorem';
 
 export default {
   title: 'UI Components/Tabs',
   tags: ['autodocs'],
-  render: args => liquid('components/tabs/tabs', {...args, lorem}),
+  render: args => liquid('components/tabs/tabs', args),
   argTypes: {
     items: {
       control: {
