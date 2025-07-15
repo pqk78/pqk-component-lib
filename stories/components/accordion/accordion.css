@@ -17,6 +17,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    outline-offset: .25rem;
   }
 
   .expand-icon {
