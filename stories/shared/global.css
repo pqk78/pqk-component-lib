@@ -22,3 +22,12 @@ body {
   color: var(--color);
   font-family: var(--font-sans);
 }
+
+:focus {
+  outline: .125rem dashed var(--color);
+  outline-offset: .125rem;
+
+  &:not(:focus-visible) {
+    outline: none;
+  }
+}
