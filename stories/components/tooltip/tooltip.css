@@ -1,0 +1,55 @@
+.tooltip-trigger {
+  background-color: transparent;
+  border: unset;
+  color: var(--accent-primary);
+  position: relative;
+
+  &.secondary {
+    color: var(--accent-secondary);
+  }
+}
+
+.tooltip {
+  &:popover-open {
+    border: 1px solid var(--accent-primary);
+    padding: .75rem;
+    position: absolute;
+    width: min(100%, 35ch);
+
+    p {
+      font-size: 1rem;
+    }
+    
+    &.bottom {
+      bottom: auto;
+      left: anchor(center);
+      top: anchor(bottom);
+      transform: translateX(-50%);
+    }
+
+    &.left {
+      left: auto;
+      right: anchor(left);
+      top: anchor(center);
+      transform: translateY(-50%);
+    }
+
+    &.right {
+      left: anchor(right);
+      right: auto;
+      top: anchor(center);
+      transform: translateY(-50%);
+    }
+
+    &.top {
+      bottom: anchor(top);
+      left: anchor(center);
+      top: auto;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+:has(> .tooltip) {
+  position: relative;
+}
