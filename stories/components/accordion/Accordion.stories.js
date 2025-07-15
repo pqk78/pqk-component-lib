@@ -1,10 +1,10 @@
 import './accordion.css';
-import { liquid } from '../../shared/engine';
+import { njk } from '../../shared/engine';
 
 export default {
   title: 'UI Components/Accordion',
   tags: ['autodocs'],
-  render: args => liquid('components/accordion/accordion', args),
+  render: args => njk('components/accordion/accordion.njk', args),
   argTypes: {
     label: { control: 'text' },
     size: {
